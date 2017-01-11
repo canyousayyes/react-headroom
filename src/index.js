@@ -19,6 +19,7 @@ export default class Headroom extends Component {
     wrapperStyle: PropTypes.object,
     pinStart: PropTypes.number,
     style: PropTypes.object,
+    pinTranslateY: PropTypes.string,
   };
 
   static defaultProps = {
@@ -177,7 +178,7 @@ export default class Headroom extends Component {
     this.props.onPin()
 
     this.setState({
-      translateY: 0,
+      translateY: this.props.pinTranslateY || 0,
       className: 'headroom headroom--pinned',
       state: 'pinned',
     })
