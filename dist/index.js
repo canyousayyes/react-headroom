@@ -227,6 +227,7 @@ var Headroom = function (_Component) {
       delete divProps.upTolerance;
       delete divProps.downTolerance;
       delete divProps.pinStart;
+      delete divProps.pinTranslateY;
 
       var style = divProps.style,
           wrapperStyle = divProps.wrapperStyle,
@@ -301,7 +302,8 @@ Headroom.propTypes = {
   onUnfix: _react.PropTypes.func,
   wrapperStyle: _react.PropTypes.object,
   pinStart: _react.PropTypes.number,
-  style: _react.PropTypes.object
+  style: _react.PropTypes.object,
+  pinTranslateY: _react.PropTypes.string
 };
 Headroom.defaultProps = {
   parent: function parent() {
